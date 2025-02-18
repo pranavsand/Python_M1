@@ -1,0 +1,9 @@
+#1. Define your fixed values:
+wins = 3
+draws = 1
+lose = 0
+#2. Calculate the total points gained by Team London
+# no of mathched played is 8
+Score_London = ((4*wins)+(3*lose)+(1*draws))
+# 3. Print the variable london_points
+print('Score Of Team London:',Score_London)
