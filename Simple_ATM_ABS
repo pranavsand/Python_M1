@@ -1,0 +1,45 @@
+from abc import ABC,abstractmethod
+class ATM(ABC):#base class includes abstract methods
+  @abstractmethod
+  def authenticate(self, card_num , pin):
+    pass
+  @abstractmethod
+  def check_balance(self):
+    pass
+  @abstractmethod
+  def withdraw(self,w_amount):
+    pass
+  @abstractmethod
+  def deposit(self,d_amount):
+    pass
+class simple_Atm(ATM): #Child Class
+  def __init__(self , balance , authenticated):
+    self.balance=balance
+    self.authenticated=False
+  def authenticate(self, card_num , pin):
+    if card_num == 345678765 and pin == 1234:
+      self.authenticated=True
+      return "Verification is succesfull!"
+    else:
+      return "Verification failed"
+  def check_balance(self):
+    if self.authenticated==True:
+       return f"current balance is {self.balance}"
+  def withdraw(self,w_amount):
+    if self.authenticated==True:
+      self.balance = self.balance -w_amount
+      return f"remaining balance is {self.balance} after withdrawing {w_amount}"
+  def deposit(self , d_amount):
+    if self.authenticated==True:
+      self.balance = self.balance + d_amount
+      return f"remaining balance is {self.balance} after depositing {d_amount}"
+obj1 = simple_Atm(50000,False)
+
+# Test Case 1
+print(obj1.authenticate(345678765,1234)) #Authenticating User
+# Test Case 2
+print(obj1.check_balance()) #Chceking Balance
+# Test Case 3
+print(obj1.withdraw(20000)) # User Withdrawl
+# Test Case 4
+print(obj1.deposit(50000)) # User depositing
