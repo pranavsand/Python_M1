@@ -1,0 +1,13 @@
+# Get the lead content of the packaged food material
+lead_content = float(input("Please enter the lead content of the packaged food material in percentage: "))
+if lead_content>5:
+  print("This batch cannot be approved")
+# Check if the lead content exceeds 5%
+
+age = int(input("enter the age:"))
+if age>18:
+  print("Welcome! ")
+else:
+  print("Sorry You can not enter!")
+
+#Check the age of the guest
