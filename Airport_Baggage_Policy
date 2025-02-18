@@ -1,0 +1,25 @@
+# Define the weight of your bags
+bag1_weight = 15
+bag2_weight = 5
+# Check if both bags weigh less than 13 kg
+Airline_policy = (bag1_weight<13) and (bag2_weight<13)
+if Airline_policy == True:
+  print("Enjoy your trip!")
+else:
+  print("Sorry, You can not go through!")
+#New Policy Up On request
+# Define the weight of your bags
+bag1_weight = 15
+bag2_weight = 5
+
+if bag1_weight<6 or bag2_weight<6:
+  print("Enjoy your trip!")
+else:
+  print("Sorry, You can not go through!")
+
+# Check if at least one bag weighs less than 6 kg
+# If the result is False, print("Sorry, You can not go through!")
+# Else, if the result is True, print("Enjoy your trip!")
+
+
+
